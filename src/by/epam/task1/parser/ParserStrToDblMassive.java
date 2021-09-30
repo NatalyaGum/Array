@@ -1,6 +1,5 @@
-package parser;
+package by.epam.task1.parser;
 
-import by.epam.task1.array.Massiv;
 import by.epam.task1.validator.ValidatorOfNumber;
 
 import java.io.IOException;
@@ -9,7 +8,7 @@ import java.util.List;
 
 public class ParserStrToDblMassive {
 
-    public List<Double> parseAllLines(List<String> path) throws IOException {
+    public double[] parseAllLines(List<String> path) throws IOException {
 
         List<Double> listOfDouble = new ArrayList<Double>();
 
@@ -20,14 +19,18 @@ public class ParserStrToDblMassive {
                     listOfDouble.add(temp);
 
                 } else {
-                    throw new IOException("Validaion was failed.");}}}
+                    System.out.println("Validaion was failed for: " + lineFromFile);
+                }
+            }
+        }
+
+        double[] arr = listOfDouble.stream().mapToDouble(Double::doubleValue).toArray();
+
+        return arr;
 
 
-        // Massiv a= new Massiv((Double[]) listOfDouble.toArray());
-                    return listOfDouble;
-
-
-        }}
+    }
+}
 
 
 

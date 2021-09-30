@@ -9,18 +9,18 @@ import java.util.Arrays;
 public class Massiv {
     static Logger logger = LogManager.getLogger();
 
-    private Double arr[];
+    private double arr[];
 
-    public Massiv (Double arr []) {
-        this.arr=arr;
+    public Massiv(double arr[]) {
+        this.arr = arr;
 
     }
 
-    public Double[] getArr() {
+    public double[] getArr() {
         return arr;
     }
 
-    public void setArr(Double[] arr) {
+    public void setArr(double[] arr) {
         this.arr = arr;
     }
 
