@@ -21,8 +21,8 @@ public class ReaderFromFile {
             while ((line = reader.readLine()) != null) {
                 lineFromFile.add(line);
             }
-        }catch (FileNotFoundException e) {
-            logger.error( "File was not found", e);
+        } catch (FileNotFoundException e) {
+            logger.error("File was not found", e);
         }
         return lineFromFile;
     }
