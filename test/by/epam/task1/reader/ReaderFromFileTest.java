@@ -1,4 +1,4 @@
-package test.epam.task1.reader;
+package by.epam.task1.reader;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,4 +1,4 @@
-package test.epam.task1.reader;
+package by.epam.task1.reader;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,7 +1,7 @@
 package by.epam.task1.main;
 
 import by.epam.task1.array.Massiv;
-import test.epam.task1.reader.ReaderFromFile;
+import by.epam.task1.reader.ReaderFromFile;
 import by.epam.task1.parser.ParserStrToDblMassive;
 import by.epam.task1.service.Average;
 import by.epam.task1.service.Exchange;
