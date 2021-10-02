@@ -22,7 +22,7 @@ public class Main {
 
         ReaderFromFile reader = new ReaderFromFile();
         ParserStrToDblMassive parser = new ParserStrToDblMassive();
-        List<String> listOfDouble = reader.readFile("./src/by/epam/task1/resources/file.txt");
+        List<String> listOfDouble = reader.readFile("resources/file.txt");
         double[] arr = parser.parseAllLines(listOfDouble);
 
         logger.info("Array from file: " + Arrays.toString(arr));
