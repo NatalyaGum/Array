@@ -1,47 +1,62 @@
 package by.epam.task1.main;
 
 import by.epam.task1.array.Massiv;
-import by.epam.task1.reader.ReaderFromFile;
-import by.epam.task1.parser.ParserStrToDblMassive;
-import by.epam.task1.service.Average;
-import by.epam.task1.service.Exchange;
-import by.epam.task1.service.MaxNumber;
-import by.epam.task1.service.MinNumber;
+import by.epam.task1.exception.ArrayException;
+import by.epam.task1.reader.impl.ReaderFromFile;
+import by.epam.task1.parser.impl.StrToDblArrayParser;
+import by.epam.task1.service.impl.ArrayService;
+import by.epam.task1.sorting.Impl.ArraySortig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     static Logger logger = LogManager.getLogger();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws ArrayException {
 
 
         ReaderFromFile reader = new ReaderFromFile();
-        ParserStrToDblMassive parser = new ParserStrToDblMassive();
-        List<String> listOfDouble = reader.readFile("resources/file.txt");
-        double[] arr = parser.parseAllLines(listOfDouble);
+        StrToDblArrayParser parser = new StrToDblArrayParser();
+        ArrayService service=new ArrayService();
+        ArraySortig sorter=new ArraySortig();
 
-        logger.info("Array from file: " + Arrays.toString(arr));
+        try {
+            List<String> listOfDouble = reader.readFile("resources/file.txt");
+            double[] lineFromFile = parser.parseAllLines(listOfDouble);
+
+            logger.info("Array from file: " + Arrays.toString(lineFromFile));
 
 
-        Massiv massiv = new Massiv(arr);
-        double[] a = massiv.getArr();
-        logger.info("Array from file: " + Arrays.toString(a));
+            Massiv massiv = new Massiv(lineFromFile);
+            double[] dblArray = massiv.getArray();
+            logger.info("Array from file: " + Arrays.toString(dblArray));
 
-        double d = MaxNumber.findMax(massiv);
-        logger.info("MaxNumber: " + d);
+            double num = service.findMax(massiv);
+            logger.info("MaxNumber: " + num);
 
-        d = MinNumber.findMin(massiv);
-        logger.info("MinNumber: " + d);
+            num = service.findMin(massiv);
+            logger.info("MinNumber: " + num);
 
-        d = Average.findAverage(massiv);
-        logger.info("Average number of elements: " + d);
+            num = service.findAverage(massiv);
+            logger.info("Average number of elements: " + num);
 
-        Exchange.change(massiv, 2, 2222214);
+            service.change(massiv, 2, 2222214);
+            //dblArray = massiv.getArray();
+            logger.info("Array from file: " + massiv.toString());
+
+            sorter.selectionSortFromSmall(massiv);
+            sorter.bubbleSortfFromBig (massiv);
+            sorter.shellSort(massiv);
+
+
+
+        } catch (ArrayException e) {
+            logger.error(e);
+            e.printStackTrace();
+        }
 
 
     }

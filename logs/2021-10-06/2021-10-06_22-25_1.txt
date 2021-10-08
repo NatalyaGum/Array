@@ -1,0 +1,5 @@
+2021-10-06 22:25:44 [main] [parseAllLines] [38] INFO  epam.task1.parser.impl.StrToDblArrayParser - Small Massiv [D@383bfa16
+2021-10-06 22:25:44 [main] [main] [30] INFO  by.epam.task1.main.Main - Array from file: [-1.1]
+2021-10-06 22:25:44 [main] [main] [35] INFO  by.epam.task1.main.Main - Array from file: [-1.1]
+2021-10-06 22:25:44 [main] [findMax] [21] INFO  epam.task1.service.impl.ArrayService - There is only one number in Massiv [D@6e0f5f7f
+2021-10-06 22:25:44 [main] [main] [57] ERROR by.epam.task1.main.Main - by.epam.task1.exception.ArrayException: There is only one number in Massiv [D@6e0f5f7f

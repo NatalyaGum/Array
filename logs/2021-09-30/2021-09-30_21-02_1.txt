@@ -1,6 +1,0 @@
-2021-09-30 21:02:36 [main] [main] [28] INFO  by.epam.task1.main.Main - Array from file: [8.5, -5.8, 9.6, 7.8, -0.0]
-2021-09-30 21:02:36 [main] [main] [33] INFO  by.epam.task1.main.Main - Array from file: [8.5, -5.8, 9.6, 7.8, -0.0]
-2021-09-30 21:02:36 [main] [main] [36] INFO  by.epam.task1.main.Main - MaxNumber: 9.6
-2021-09-30 21:02:36 [main] [main] [39] INFO  by.epam.task1.main.Main - MinNumber: -5.8
-2021-09-30 21:02:36 [main] [main] [42] INFO  by.epam.task1.main.Main - Average number of elements: 4.0200000000000005
-2021-09-30 21:02:36 [main] [change] [19] INFO  by.epam.task1.service.Exchange - Exchange service[8.5, -5.8, 2222214.0, 7.8, -0.0]

@@ -1,6 +1,7 @@
 package by.epam.task1.array;
 
 
+import by.epam.task1.exception.ArrayException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,19 +10,21 @@ import java.util.Arrays;
 public class Massiv {
     static Logger logger = LogManager.getLogger();
 
-    private double arr[];
+    private double array[];
 
-    public Massiv(double arr[]) {
-        this.arr = arr;
+    public Massiv(double[] array) {
+        double[] copyArray = Arrays.copyOf(array, array.length);
+        this.array = copyArray;
 
     }
 
-    public double[] getArr() {
-        return arr;
+    public double[] getArray() throws ArrayException {
+         return array.clone();
     }
 
-    public void setArr(double[] arr) {
-        this.arr = arr;
+    public void setArray(double[] array) {
+        double[] copyArray = array.clone();
+        this.array = copyArray;
     }
 
     @Override
@@ -29,12 +32,18 @@ public class Massiv {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Massiv massiv = (Massiv) o;
-        return Arrays.equals(arr, massiv.arr);
+        return Arrays.equals(array, massiv.array);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(arr);
+        return Arrays.hashCode(array);
+    }
+
+    @Override
+    public String toString() {
+        return "Massiv: " +
+                 Arrays.toString(array) ;
     }
 }
 

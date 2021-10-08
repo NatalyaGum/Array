@@ -1,0 +1,13 @@
+2021-10-06 22:50:02 [main] [findMax] [21] INFO  epam.task1.service.impl.ArrayService - There is too small Massiv [-2.2]
+2021-10-06 22:50:12 [main] [parseAllLines] [26] INFO  epam.task1.parser.impl.StrToDblArrayParser - Validaion was failed for: 3.  87
+2021-10-06 22:50:12 [main] [parseAllLines] [26] INFO  epam.task1.parser.impl.StrToDblArrayParser - Validaion was failed for: hsfh
+2021-10-06 22:50:12 [main] [main] [30] INFO  by.epam.task1.main.Main - Array from file: [-1.1, 2.2, 3.3, 5.5, 8.9, 888.8, -9.5, 98.0, -89.0]
+2021-10-06 22:50:12 [main] [main] [35] INFO  by.epam.task1.main.Main - Array from file: [-1.1, 2.2, 3.3, 5.5, 8.9, 888.8, -9.5, 98.0, -89.0]
+2021-10-06 22:50:12 [main] [main] [38] INFO  by.epam.task1.main.Main - MaxNumber: 888.8
+2021-10-06 22:50:12 [main] [main] [41] INFO  by.epam.task1.main.Main - MinNumber: -89.0
+2021-10-06 22:50:12 [main] [main] [44] INFO  by.epam.task1.main.Main - Average number of elements: 100.78888888888888
+2021-10-06 22:50:12 [main] [change] [94] INFO  epam.task1.service.impl.ArrayService - Change service[-1.1, 2.2, 2222214.0, 5.5, 8.9, 888.8, -9.5, 98.0, -89.0]
+2021-10-06 22:50:12 [main] [main] [48] INFO  by.epam.task1.main.Main - Array from file: Massiv: [-1.1, 2.2, 2222214.0, 5.5, 8.9, 888.8, -9.5, 98.0, -89.0]
+2021-10-06 22:50:12 [main] [selectionSortFromSmall] [88] INFO  epam.task1.sorting.Impl.ArraySortig - selectionSort: [-89.0, -9.5, -1.1, 2.2, 5.5, 8.9, 98.0, 888.8, 2222214.0]
+2021-10-06 22:50:12 [main] [bubbleSortfFromBig] [34] INFO  epam.task1.sorting.Impl.ArraySortig - bubbleSort: [2222214.0, 888.8, 98.0, 8.9, 5.5, 2.2, -1.1, -9.5, -89.0]
+2021-10-06 22:50:12 [main] [shellSort] [59] INFO  epam.task1.sorting.Impl.ArraySortig - shellSort: [-89.0, -9.5, -1.1, 2.2, 5.5, 8.9, 98.0, 888.8, 2222214.0]
