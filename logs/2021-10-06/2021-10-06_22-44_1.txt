@@ -1,1 +1,0 @@
-2021-10-06 22:44:00 [main] [findMax] [21] INFO  epam.task1.service.impl.ArrayService - There is only one number in Massiv [D@76f4b65

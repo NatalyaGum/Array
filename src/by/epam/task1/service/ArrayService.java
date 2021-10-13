@@ -3,7 +3,7 @@ package by.epam.task1.service;
 import by.epam.task1.array.Massiv;
 import by.epam.task1.exception.ArrayException;
 
-public interface ArrayServiceInterface {
+public interface ArrayService {
 
     double findAverage(Massiv massiv) throws ArrayException;
 

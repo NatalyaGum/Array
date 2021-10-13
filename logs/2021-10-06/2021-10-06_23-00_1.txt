@@ -1,4 +1,0 @@
-2021-10-06 23:00:08 [main] [parseAllLines] [26] INFO  epam.task1.parser.impl.StrToDblArrayParser - Validaion was failed for: 45244kl.j
-2021-10-06 23:00:08 [main] [parseAllLines] [38] INFO  epam.task1.parser.impl.StrToDblArrayParser - Small array [D@57cf54e1
-2021-10-06 23:00:08 [main] [parseAllLines] [41] INFO  epam.task1.parser.impl.StrToDblArrayParser - Empty Array [D@57cf54e1
-2021-10-06 23:00:08 [main] [main] [57] ERROR by.epam.task1.main.Main - by.epam.task1.exception.ArrayException: Empty Array 

@@ -1,1 +1,0 @@
-2021-10-06 22:33:29 [main] [bubbleSortfFromBig] [22] INFO  epam.task1.sorting.Impl.ArraySortig - There is too small Massiv [D@4c1f22f3

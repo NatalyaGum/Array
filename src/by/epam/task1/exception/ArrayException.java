@@ -2,7 +2,7 @@ package by.epam.task1.exception;
 
 import java.io.IOException;
 
-public class ArrayException extends IOException{
+public class ArrayException extends IOException {
 
     public ArrayException() {
         super();

@@ -19,7 +19,7 @@ public class Massiv {
     }
 
     public double[] getArray() throws ArrayException {
-         return array.clone();
+        return array.clone();
     }
 
     public void setArray(double[] array) {
@@ -43,7 +43,7 @@ public class Massiv {
     @Override
     public String toString() {
         return "Massiv: " +
-                 Arrays.toString(array) ;
+                Arrays.toString(array);
     }
 }
 

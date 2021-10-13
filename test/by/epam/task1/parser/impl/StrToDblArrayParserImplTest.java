@@ -7,12 +7,11 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class StrToDblArrayParserTest {
+public class StrToDblArrayParserImplTest {
 
 
-    StrToDblArrayParser parser = new StrToDblArrayParser();
+    StrToDblArrayParserImpl parser = new StrToDblArrayParserImpl();
     List<String> listOfDouble = Arrays.asList("-1.1", "2.2", "3.3", "3.  87", "hsfh");
-    List<String>listOfDoubleEmpty=Arrays.asList("");
     double[] expected = {-1.1, 2.2, 3.3};
 
 
@@ -22,8 +21,4 @@ public class StrToDblArrayParserTest {
         Assert.assertEquals(actual, expected);
     }
 
-    @Test(expectedExceptions = ArrayException.class, expectedExceptionsMessageRegExp=".*Empty Array.*")
-    public void testArrayException() throws ArrayException {
-        parser.parseAllLines(listOfDoubleEmpty);;
-    }
 }

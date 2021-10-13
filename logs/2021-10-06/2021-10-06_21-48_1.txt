@@ -1,1 +1,0 @@
-2021-10-06 21:48:50 [main] [readFile] [27] INFO  epam.task1.reader.impl.ReaderFromFile - wrong/test.txt - the file was not found, java.io.FileNotFoundException: wrong\test.txt (Системе не удается найти указанный путь)

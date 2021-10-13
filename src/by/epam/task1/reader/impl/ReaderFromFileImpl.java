@@ -1,7 +1,7 @@
 package by.epam.task1.reader.impl;
 
 import by.epam.task1.exception.ArrayException;
-import by.epam.task1.reader.ReaderFromFileInterface;
+import by.epam.task1.reader.ReaderFromFile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReaderFromFile implements ReaderFromFileInterface {
+public class ReaderFromFileImpl implements ReaderFromFile {
     static Logger logger = LogManager.getLogger();
 
     public List<String> readFile(String pathToFile) throws ArrayException {
@@ -24,10 +24,10 @@ public class ReaderFromFile implements ReaderFromFileInterface {
                 lineFromFile.add(line);
             }
         } catch (FileNotFoundException e) {
-            logger.info(pathToFile + " - the file was not found, ",  e);
-            throw new ArrayException(pathToFile + " - the file was not found, ",  e);
+            logger.error(pathToFile + " - the file was not found, ", e);
+            throw new ArrayException(pathToFile + " - the file was not found, ", e);
         } catch (IOException e) {
-            logger.info(pathToFile + " I/O error ", e);
+            logger.error(pathToFile + " I/O error ", e);
             throw new ArrayException(pathToFile + " I/O error ", e);
         }
         return lineFromFile;

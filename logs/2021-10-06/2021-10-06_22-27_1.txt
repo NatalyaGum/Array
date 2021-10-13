@@ -1,1 +1,0 @@
-2021-10-06 22:27:26 [main] [bubbleSortfFromBig] [34] INFO  epam.task1.sorting.Impl.ArraySortig - bubbleSort: [7.7, 5.5, 3.3, 1.1, -2.2]

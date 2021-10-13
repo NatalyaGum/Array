@@ -2,14 +2,14 @@ package by.epam.task1.service.impl;
 
 import by.epam.task1.array.Massiv;
 import by.epam.task1.exception.ArrayException;
-import by.epam.task1.service.ArrayServiceInterface;
+import by.epam.task1.service.ArrayService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Arrays;
 import java.util.stream.DoubleStream;
 
-public class ArrayService implements ArrayServiceInterface {
+public class ArrayServiceImpl implements ArrayService {
     static Logger logger = LogManager.getLogger();
 
     @Override
@@ -18,8 +18,8 @@ public class ArrayService implements ArrayServiceInterface {
         double[] dblArray = massiv.getArray();
         double max = dblArray[0];
         if (dblArray.length < 2) {
-            logger.info("There is too small Massiv " + Arrays.toString(dblArray));
-            throw new ArrayException("There is too small Massiv " + Arrays.toString(dblArray));
+            logger.error("There is too small " + massiv);
+            throw new ArrayException("There is too small " + massiv);
         }
         for (double i : dblArray) {
             if (i > max) {
@@ -34,8 +34,8 @@ public class ArrayService implements ArrayServiceInterface {
         double[] dblArray = massiv.getArray();
         double min = dblArray[0];
         if (dblArray.length < 2) {
-            logger.info("There is too small Massiv " + Arrays.toString(dblArray));
-            throw new ArrayException("There is too small Massiv " + Arrays.toString(dblArray));
+            logger.error("There is too small " + massiv);
+            throw new ArrayException("There is too small " + massiv);
         }
         for (double i : dblArray) {
             if (i < min) {
@@ -86,7 +86,7 @@ public class ArrayService implements ArrayServiceInterface {
     public Massiv change(Massiv massiv, int index, double num) throws ArrayException {
         double[] dblArray = massiv.getArray();
         if (dblArray.length <= index) {
-            logger.info("Out of index " + index);
+            logger.error("Out of index " + index);
             throw new ArrayException("Out of index " + index);
         }
         dblArray[index] = num;
@@ -111,8 +111,8 @@ public class ArrayService implements ArrayServiceInterface {
     public double findMaxStream(Massiv massiv) throws ArrayException {
         double[] dblArray = massiv.getArray();
         if (dblArray.length < 2) {
-            logger.info("There is too small Massiv " + Arrays.toString(dblArray));
-            throw new ArrayException("There is too small Massiv " + Arrays.toString(dblArray));
+            logger.error("There is too small " + massiv);
+            throw new ArrayException("There is too small " + massiv);
         }
         double max = DoubleStream.of(dblArray)
                 .max()
@@ -124,8 +124,8 @@ public class ArrayService implements ArrayServiceInterface {
     public double findMinStream(Massiv massiv) throws ArrayException {
         double[] dblArray = massiv.getArray();
         if (dblArray.length < 2) {
-            logger.info("There is too small Massiv " + Arrays.toString(dblArray));
-            throw new ArrayException("There is too small Massiv " + Arrays.toString(dblArray));
+            logger.error("There is too small " + massiv);
+            throw new ArrayException("There is too small " + massiv);
         }
         double min = DoubleStream.of(dblArray)
                 .min()

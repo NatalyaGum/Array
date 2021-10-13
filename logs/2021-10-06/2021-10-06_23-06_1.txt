@@ -1,6 +1,0 @@
-2021-10-06 23:06:18 [main] [bubbleSortfFromBig] [34] INFO  epam.task1.sorting.Impl.ArraySortig - bubbleSort: [7.7, 5.5, 3.3, 1.1, -2.2]
-2021-10-06 23:06:25 [main] [bubbleSortfFromBig] [22] INFO  epam.task1.sorting.Impl.ArraySortig - There is too small Massiv [D@34c01041
-2021-10-06 23:06:25 [main] [bubbleSortfFromBig] [34] INFO  epam.task1.sorting.Impl.ArraySortig - bubbleSort: [7.7, 5.5, 3.3, 1.1, -2.2]
-2021-10-06 23:06:25 [main] [selectionSortFromSmall] [88] INFO  epam.task1.sorting.Impl.ArraySortig - selectionSort: [-2.2, 1.1, 3.3, 5.5, 7.7]
-2021-10-06 23:06:25 [main] [shellSort] [59] INFO  epam.task1.sorting.Impl.ArraySortig - shellSort: [-2.2, 1.1, 3.3, 5.5, 7.7]
-2021-10-06 23:06:25 [main] [sortStream] [102] INFO  epam.task1.sorting.Impl.ArraySortig - sortStream: [-2.2, 5.5, 3.3, 7.7, 1.1]

@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class ArrayServiceTest {
+public class ArrayServiceImplTest {
 
 
     double[] testArray = new double[]{-1.1, 2.2, 3.3};
     double[] testArray1 = new double[]{-2.2};
     Massiv massiv, massiv1;
-    ArrayService service;
+    ArrayServiceImpl service;
     double expectedMax = 3.3;
     double expectedMin = -1.1;
     double expectedAverage = 1.466667;
@@ -21,15 +21,15 @@ public class ArrayServiceTest {
     double expectedSum = 4.4;
     double newValue = 999;
     int index = 1;
-    int gage=2;
+    int gage = 2;
     Massiv expectedChangedMassiv = new Massiv(new double[]{-1.1, 999.0, 3.3});
-    Massiv expectedChangedMassivStream=new Massiv(new double[]{-1.1, 999.0, 999.0});
+    Massiv expectedChangedMassivStream = new Massiv(new double[]{-1.1, 999.0, 999.0});
 
     @BeforeMethod
     public void initialize() {
         massiv = new Massiv(testArray);
         massiv1 = new Massiv(testArray1);
-        service = new ArrayService();
+        service = new ArrayServiceImpl();
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ArrayServiceTest {
     }
 
     @Test
-    public void testFindMin() throws ArrayException{
+    public void testFindMin() throws ArrayException {
         double actual = service.findMin(massiv);
         assertEquals(actual, expectedMin);
     }
@@ -48,7 +48,7 @@ public class ArrayServiceTest {
     @Test
     public void testFindAverage() throws ArrayException {
         double actual = service.findAverage(massiv);
-        assertEquals(actual, expectedAverage,0.001);
+        assertEquals(actual, expectedAverage, 0.001);
     }
 
     @Test
@@ -59,7 +59,7 @@ public class ArrayServiceTest {
     }
 
     @Test
-    public void testFindNegative() throws ArrayException{
+    public void testFindNegative() throws ArrayException {
         double actual = service.countNegative(massiv);
         assertEquals(actual, expectedNegative);
     }
@@ -92,7 +92,7 @@ public class ArrayServiceTest {
     @Test
     public void testFindAverageStream() throws ArrayException {
         double actual = service.findAverageStream(massiv);
-        assertEquals(actual, expectedAverage,0.001);
+        assertEquals(actual, expectedAverage, 0.001);
     }
 
 
@@ -107,7 +107,9 @@ public class ArrayServiceTest {
         Massiv actual = service.changeStream(massiv, index, newValue);
         assertEquals(actual, expectedChangedMassivStream);
     }
-    @Test(expectedExceptions = ArrayException.class, expectedExceptionsMessageRegExp=".*There is too small Massiv.*")
+
+    @Test(expectedExceptions = ArrayException.class, expectedExceptionsMessageRegExp = ".*There is too small Massiv.*")
     public void testArrayException() throws ArrayException {
-        service.findMax(massiv1);}
+        service.findMax(massiv1);
+    }
 }

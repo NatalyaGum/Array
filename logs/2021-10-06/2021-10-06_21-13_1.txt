@@ -1,1 +1,0 @@
-2021-10-06 21:13:53 [main] [change] [94] INFO  epam.task1.service.impl.ArrayService - Change service[-1.1, 999.0, 3.3]

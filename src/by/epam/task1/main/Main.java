@@ -2,10 +2,10 @@ package by.epam.task1.main;
 
 import by.epam.task1.array.Massiv;
 import by.epam.task1.exception.ArrayException;
-import by.epam.task1.reader.impl.ReaderFromFile;
-import by.epam.task1.parser.impl.StrToDblArrayParser;
-import by.epam.task1.service.impl.ArrayService;
-import by.epam.task1.sorting.Impl.ArraySortig;
+import by.epam.task1.reader.impl.ReaderFromFileImpl;
+import by.epam.task1.parser.impl.StrToDblArrayParserImpl;
+import by.epam.task1.service.impl.ArrayServiceImpl;
+import by.epam.task1.sorting.Impl.ArraySortingImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,10 +18,10 @@ public class Main {
     public static void main(String[] args) throws ArrayException {
 
 
-        ReaderFromFile reader = new ReaderFromFile();
-        StrToDblArrayParser parser = new StrToDblArrayParser();
-        ArrayService service=new ArrayService();
-        ArraySortig sorter=new ArraySortig();
+        ReaderFromFileImpl reader = new ReaderFromFileImpl();
+        StrToDblArrayParserImpl parser = new StrToDblArrayParserImpl();
+        ArrayServiceImpl service = new ArrayServiceImpl();
+        ArraySortingImpl sorter = new ArraySortingImpl();
 
         try {
             List<String> listOfDouble = reader.readFile("resources/file.txt");
@@ -48,9 +48,8 @@ public class Main {
             logger.info("Array from file: " + massiv.toString());
 
             sorter.selectionSortFromSmall(massiv);
-            sorter.bubbleSortfFromBig (massiv);
+            sorter.bubbleSortFromBig(massiv);
             sorter.shellSort(massiv);
-
 
 
         } catch (ArrayException e) {

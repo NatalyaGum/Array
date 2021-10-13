@@ -4,8 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class NumberValidatorTest {
-    NumberValidator validator=new NumberValidator();
+public class NumberValidatorImplTest {
+    NumberValidatorImpl validator = new NumberValidatorImpl();
 
     @DataProvider(name = "testValidation")
     public Object[][] createData() {
@@ -17,8 +17,8 @@ public class NumberValidatorTest {
     }
 
     @Test(dataProvider = "testValidation")
-    public void testValidate(String line, boolean expected) {
-        boolean actual = validator.validate(line);
+    public void testValidateArray(String line, boolean expected) {
+        boolean actual = validator.validateArray(line);
         Assert.assertEquals(actual, expected);
 
     }
